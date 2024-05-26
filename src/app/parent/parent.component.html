@@ -1,5 +1,5 @@
 <p>parent works!</p>
-<app-child [pmsg]="pmessage" (messageparent)="getchilddata($event)" ></app-child>
+<app-child #child [pmsg]="pmessage" (messageparent)="getchilddata($event)" ></app-child>
 
 
 <app-child-sibling></app-child-sibling>

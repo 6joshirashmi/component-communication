@@ -1,4 +1,4 @@
-import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, QueryList, ViewChild, ViewChildren, viewChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 import { ChildSiblingComponent } from '../child-sibling/child-sibling.component';
 
@@ -11,14 +11,22 @@ import { ChildSiblingComponent } from '../child-sibling/child-sibling.component'
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class ParentComponent  implements AfterViewInit{
-@ViewChild('app-child-sibling') childcomp!:ChildSiblingComponent;
+@ViewChild(ChildSiblingComponent) childcomp!:ChildSiblingComponent;
+@ViewChild('child') child!:ChildComponent;
+
+
+
 
   constructor(){}
   ngAfterViewInit(): void {
-    console.log(this.childcomp!);
+    console.log(this.childcomp);
+
+    //console.log("hello");
+    console.log(this.child);
 
   }
 chmsg:string='';
+
     pmessage:string="mera pyara bachha";
     
     getchilddata(x:string){
