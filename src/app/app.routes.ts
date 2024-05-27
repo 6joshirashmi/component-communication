@@ -6,8 +6,10 @@ import { ChildComponent } from './child/child.component';
 export const routes: Routes = [
 
     {path:'parent' , component:ParentComponent},
-    {path:'childsibling' , component:ChildSiblingComponent},
+   {path:'childsibling' , component:ChildSiblingComponent},
+    {path:'childsibling/:id' , component:ChildSiblingComponent},
     {path:'child' , component:ChildComponent},
     // {path:'/' , component:},
     // {path:'/' , component:},
+    
 ];

@@ -17,6 +17,7 @@ export class ParentComponent  implements AfterViewInit{
 
 
 
+
   constructor(){}
   ngAfterViewInit(): void {
     console.log(this.childcomp);

@@ -1,21 +1,19 @@
 <p>child works!</p>
-
-
-
 {{pmsg}}
-
-
 <input type="button" value="click me" (click)="sendtochilddata()">
 
-
-
-
-<div   >
-    <input #nam type="text" value="jhg"  >
+<div >
+    <input #nam type="text" value="1"  >
 </div>
-
 {{nam.value}}
+<button (click)=getdatabyservice(1)>Didi</button>
+<!-- optional rout parameter -->
+<!-- <a [routerLink]="['childsibling',{id:1}]">sibling</a> -->
 
+ <!-- Required route parameter---- -->
 
+<!-- <a [routerLink]="['childsibling',1]">Bhai</a> -->
 
+<!-- query parameter -->
+<a [routerLink]="['childsibling']" [queryParams]="{'name':'rashmi','from':'Bharat'}">Bhai Ji</a>
 
